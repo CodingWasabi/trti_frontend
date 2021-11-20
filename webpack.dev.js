@@ -20,7 +20,7 @@ module.exports = merge(common, {
       },
     }),
     new EnvironmentPlugin({
-      'process.env.REACT_SERVER_URL': JSON.stringify(process.env.REACT_SERVER_URL),
+      'process.env.REACT_APP_SERVER_URL': JSON.stringify(process.env.REACT_APP_SERVER_URL),
     }),
   ],
 });
