@@ -1,11 +1,15 @@
 import React, { MouseEvent, ReactText } from 'react';
 import styled from 'styled-components';
 
+import Theme from '@/theme/Theme';
+
 interface IButtonProps {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   width: string;
   height: string;
+  backgroundColor: string;
   type?: 'button' | 'submit' | 'reset';
+  fontColor?: string;
   fontSize?: string;
   fontWeight?: number;
   borderRadius?: string;
@@ -22,8 +26,10 @@ const ButtonWrapper = styled.button<IButtonProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   border-radius: ${(props) => props.borderRadius};
+  background-color: ${(props) => props.backgroundColor};
   margin: ${(props) => props.margin};
 
+  font: ${(props) => props.fontColor};
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};
 `;
@@ -35,7 +41,9 @@ interface IButtonComponentProps extends IButtonProps {
 const Button = ({
   children,
   onClick,
+  backgroundColor,
   type = 'button',
+  fontColor = Theme.F_3,
   fontSize = '14px',
   fontWeight = 500,
   borderRadius = '0px',
@@ -46,6 +54,7 @@ const Button = ({
     <ButtonWrapper
       {...size}
       type={type}
+      backgroundColor={backgroundColor}
       fontSize={fontSize}
       fontWeight={fontWeight}
       borderRadius={borderRadius}
