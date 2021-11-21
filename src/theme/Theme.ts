@@ -12,6 +12,8 @@ export default {
   F_2: '#A0A0A0',
   F_3: '#707070',
   F_4: '#191919',
+  B_1: '#FBFBFB',
+  B_2: '#F5F5F5',
 
   // responsive
   mobile: `@media (max-width: ${size.mobile})`,
