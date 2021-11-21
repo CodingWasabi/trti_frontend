@@ -17,19 +17,16 @@ export const HeaderBlock = styled.div`
   height: 80px;
 
   ${({ theme }) => theme.desktop} {
-    max-width: 1200px;
+    max-width: 1010px;
   }
 `;
 
 export const Right = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  ${({ theme }) => theme.desktop} {
-    max-width: 120px;
-  }
+  width: 120px;
 `;
 
 export const Login = styled.span`
@@ -41,7 +38,7 @@ export const Login = styled.span`
   width: 65px;
   height: 23px;
   border-radius: 18px;
-  background-color: ${({ theme }) => theme.M_1};
+  background-color: ${({ theme }) => theme.B_2};
 
   font: ${({ theme }) => theme.F_3};
   font-weight: 400;
