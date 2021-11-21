@@ -1,7 +1,7 @@
 import React, { MouseEvent, ReactText } from 'react';
 import styled from 'styled-components';
 
-import Theme from '@/theme/Theme';
+import { Theme } from '@/theme/Theme';
 
 interface IButtonProps {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;

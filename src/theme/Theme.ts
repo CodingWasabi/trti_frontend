@@ -3,7 +3,7 @@ const size = {
   desktop: '1024px',
 };
 
-export default {
+export const Theme = {
   M_1: '#FF7F8C',
   M_2: '#FFCE6C',
   M_3: '#6BE065',
