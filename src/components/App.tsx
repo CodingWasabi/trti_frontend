@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Router from '@/Router';
+
 const App = () => {
-  return <div>Junseo's project setting</div>;
+  return <Router />;
 };
 
 export default App;
