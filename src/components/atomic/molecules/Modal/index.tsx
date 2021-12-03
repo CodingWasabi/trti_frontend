@@ -1,5 +1,5 @@
 import React, { MouseEvent } from 'react';
-import { ModalWrapper, ModalOverlay, ModalContents } from '@/components/common/Modal/style';
+import { ModalWrapper, ModalOverlay, ModalContents } from '@/components/atomic/molecules/Modal/style';
 
 interface IModalProps {
   onClick: (e: MouseEvent<HTMLElement>) => void;
