@@ -13,9 +13,7 @@ const App = () => {
     <>
       <GlobalStyles />
       <ThemeProvider theme={Theme}>
-        <AppLayout>
-          <Router />
-        </AppLayout>
+        <Router />
       </ThemeProvider>
     </>
   );
