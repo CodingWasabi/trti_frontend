@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.footer`
   width: 100%;
   height: 161px;
+  min-width: 320px;
 
   background-color: ${({ theme }) => theme.B_2};
 `;
