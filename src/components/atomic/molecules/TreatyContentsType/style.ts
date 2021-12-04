@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
-import { ILeftRadiusContentsProps } from '@/components/atomic/molecules/LeftRadiusContents';
+import { ITreatyContentsTypeProps } from '@/components/atomic/molecules/TreatyContentsType';
 
 export const Wrapper = styled.div`
   display: flex;
+  width: 100%;
+  max-width: 117px;
 `;
 
-export const Contents = styled.div<ILeftRadiusContentsProps>`
+export const Contents = styled.div<ITreatyContentsTypeProps>`
   display: flex;
   align-items: center;
   justify-content: center;
