@@ -13,7 +13,7 @@ export const ContentsWrapper = styled.div`
 export const Contents = styled.div`
   position: relative;
   margin: 0 auto;
-
+  padding: 0px 10px;
   min-width: 320px;
   width: 100%;
   min-height: 100%;
