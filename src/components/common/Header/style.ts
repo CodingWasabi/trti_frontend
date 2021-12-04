@@ -12,6 +12,8 @@ export const HeaderBlock = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  padding: 0px 15px;
+
   width: 100%;
   min-width: 320px;
   height: 80px;
