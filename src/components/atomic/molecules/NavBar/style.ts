@@ -20,6 +20,8 @@ export const NavBarBlock = styled.div`
   display: flex;
   justify-content: space-between;
 
+  padding: 0px 15px;
+
   width: 100%;
   min-width: 320px;
 
