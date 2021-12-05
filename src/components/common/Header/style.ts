@@ -42,7 +42,10 @@ export const Login = styled.span`
   border-radius: 18px;
   background-color: ${({ theme }) => theme.B_2};
 
-  font: ${({ theme }) => theme.F_3};
   font-weight: 400;
   font-size: 11px;
+
+  a {
+    color: ${({ theme }) => theme.F_3};
+  }
 `;
