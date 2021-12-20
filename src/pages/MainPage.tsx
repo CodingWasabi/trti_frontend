@@ -10,8 +10,6 @@ import TreatyContentsList from '@/components/atomic/molecules/TreatyContentsList
 import TreatyContents from '@/components/atomic/organisms/TreatyContents';
 
 const MainPage = () => {
-  console.log(process.env.REACT_APP_SERVER_URL);
-  console.log(process.env.REACT_APP_KAKAO_KEY);
   return (
     <AppLayout>
       MainPage
