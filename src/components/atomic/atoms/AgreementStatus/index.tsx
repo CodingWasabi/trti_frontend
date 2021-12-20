@@ -11,7 +11,7 @@ export interface IAgreementStatus {
 const AgreementStatus = ({ isAgreed }: IAgreementStatus) => {
   return (
     <Wrapper isAgreed={isAgreed}>
-      <Text fontColor="#FFFFFF" fontSize="9px" fontWeight="500" cursor={false}>
+      <Text fontColor="#FFFFFF" fontSize="9px" fontWeight="500">
         {isAgreed ? '합의완료' : '합의중'}
       </Text>
     </Wrapper>
