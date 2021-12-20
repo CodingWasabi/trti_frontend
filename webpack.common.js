@@ -1,8 +1,7 @@
 /* eslint-disable */
 const path = require('path');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const { DefinePlugin } = require('webpack');
-const dotenv = require('dotenv');
+require('dotenv/config');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -31,10 +30,5 @@ module.exports = {
     clean: true,
     publicPath: '/',
   },
-  plugins: [
-    new ForkTsCheckerWebpackPlugin(),
-    new DefinePlugin({
-      'process.env': JSON.stringify(dotenv.config().parsed),
-    }),
-  ],
+  plugins: [new ForkTsCheckerWebpackPlugin()],
 };
