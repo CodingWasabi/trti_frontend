@@ -2,6 +2,7 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { EnvironmentPlugin } = require('webpack');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -16,6 +17,7 @@ module.exports = merge(common, {
         removeComments: true,
       },
     }),
+    new EnvironmentPlugin(['REACT_APP_SERVER_URL', 'REACT_APP_KAKAO_KEY']),
   ],
   optimization: {
     moduleIds: 'deterministic',
