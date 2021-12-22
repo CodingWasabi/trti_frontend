@@ -6,7 +6,7 @@ export interface ITextProps {
   fontColor: string;
   fontSize: string;
   fontWeight: string;
-  cursor: boolean;
+  cursor?: boolean;
   onClick?: () => void;
 }
 
