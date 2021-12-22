@@ -1,28 +1,10 @@
 import React, { MouseEvent } from 'react';
-import styled from 'styled-components';
 
 import { Theme } from '@/theme/Theme';
 
-const ButtonWrapper = styled.button<IButtonProps>`
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
+import { ButtonWrapper } from './style';
 
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  border-radius: ${(props) => props.borderRadius};
-  background-color: ${(props) => props.backgroundColor};
-  box-shadow: ${(props) => props.boxShadow};
-  margin: ${(props) => props.margin};
-
-  font: ${(props) => props.fontColor};
-  font-size: ${(props) => props.fontSize};
-  font-weight: ${(props) => props.fontWeight};
-`;
-
-interface IButtonProps {
+export interface IButtonProps {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   width: string;
   height: string;

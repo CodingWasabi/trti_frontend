@@ -1,5 +1,7 @@
 import React from 'react';
 
+import useGetResponsive from '@/hooks/useGetResponsive';
+
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 
@@ -12,10 +14,11 @@ interface IAppLayoutComponentProps {
 }
 
 const AppLayout = ({ children }: IAppLayoutComponentProps) => {
+  const isDesktop = useGetResponsive() > 1024;
   return (
     <Wrapper>
       <Header />
-      <NavBar />
+      {isDesktop && <NavBar />}
       <ContentsWrapper>
         <Contents>{children}</Contents>
       </ContentsWrapper>
