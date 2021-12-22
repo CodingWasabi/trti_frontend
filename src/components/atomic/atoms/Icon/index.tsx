@@ -10,9 +10,14 @@ const IconWrapper = styled.div<{ width: number; height: number }>`
 
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
+
+  svg {
+    width: ${(props) => props.width}px;
+    height: ${(props) => props.height}px;
+  }
 `;
 
-type IconOption = keyof typeof icons;
+export type IconOption = keyof typeof icons;
 
 interface IIconProps {
   icon: IconOption;
@@ -22,6 +27,7 @@ interface IIconProps {
 
 const Icon = ({ icon, width, height }: IIconProps) => {
   const IconComponent = icons[icon];
+
   return (
     <IconWrapper width={width || 24} height={height || 24}>
       <IconComponent />
