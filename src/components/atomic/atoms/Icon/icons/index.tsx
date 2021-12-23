@@ -6,3 +6,7 @@ export { default as User } from './User';
 export { default as RightArrow } from './RightArrow';
 export { default as Plus } from './Plus';
 export { default as People } from './People';
+export { default as EmptyImage } from './EmptyImage';
+export { default as Marker } from './Marker';
+export { default as PlusPeople } from './PlusPerson';
+export { default as Calendar } from './Calendar';

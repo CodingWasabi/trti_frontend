@@ -6,6 +6,7 @@ import { ButtonWrapper } from './style';
 
 export interface IButtonProps {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+  maxWidth?: string;
   width: string;
   height: string;
   backgroundColor: string;
@@ -16,6 +17,7 @@ export interface IButtonProps {
   borderRadius?: string;
   boxShadow?: string;
   margin?: string;
+  disabled?: boolean;
 }
 
 interface IButtonComponentProps extends IButtonProps {
@@ -33,6 +35,7 @@ const Button = ({
   borderRadius = '0px',
   boxShadow = '0',
   margin = '0',
+  disabled = false,
   ...size
 }: IButtonComponentProps) => {
   return (
@@ -45,7 +48,8 @@ const Button = ({
       borderRadius={borderRadius}
       boxShadow={boxShadow}
       onClick={onClick}
-      margin={margin}>
+      margin={margin}
+      disabled={disabled}>
       {children}
     </ButtonWrapper>
   );
