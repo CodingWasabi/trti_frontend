@@ -3,8 +3,9 @@ import React from 'react';
 import { StyledLabel } from './style';
 
 export interface ILabelProps {
-  width: string;
-  height: string;
+  width: number;
+  height: number;
+  margin: string;
   backgroundColor: string;
   borderRadius?: string;
   htmlFor: string;

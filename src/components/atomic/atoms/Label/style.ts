@@ -9,8 +9,10 @@ export const StyledLabel = styled.label<ILabelProps>`
   align-items: center;
   justify-content: center;
 
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
+  margin: ${(props) => props.margin};
+
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
 
   background-color: ${(props) => props.backgroundColor};
   border-radius: ${(props) => props.borderRadius};
