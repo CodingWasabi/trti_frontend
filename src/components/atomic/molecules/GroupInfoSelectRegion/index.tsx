@@ -4,7 +4,7 @@ import { regions } from '@/lib/constants';
 
 import Select from '@/components/atomic/atoms/Select';
 
-import GroupInfoInput from '@/components/atomic/molecules/GroupInfoInput';
+import GroupInfoBox from '@/components/atomic/molecules/GroupInfoBox';
 
 interface IGroupInfoSelectRegion {
   onChangeSelect: (e: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -12,9 +12,9 @@ interface IGroupInfoSelectRegion {
 
 const GroupInfoSelectRegion = ({ onChangeSelect }: IGroupInfoSelectRegion) => {
   return (
-    <GroupInfoInput icon="Marker">
+    <GroupInfoBox icon="Marker">
       <Select defaultValue="여행지를 선택하세요" onChangeSelect={onChangeSelect} selectOptions={regions} />
-    </GroupInfoInput>
+    </GroupInfoBox>
   );
 };
 
