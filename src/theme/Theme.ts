@@ -1,5 +1,6 @@
 const size = {
   mobile: '480px',
+  tablet: '600px',
   desktop: '1024px',
 };
 
@@ -17,5 +18,6 @@ export const Theme = {
 
   // responsive
   mobile: `@media (max-width: ${size.mobile})`,
+  tablet: `@media (min-width: ${size.tablet})`,
   desktop: `@media (min-width: ${size.desktop})`,
 };
