@@ -1,4 +1,4 @@
-import React, { ReactText } from 'react';
+import React from 'react';
 
 import { StyledSpan } from './style';
 
@@ -11,7 +11,7 @@ export interface ITextProps {
 }
 
 interface ITextComponentProps extends ITextProps {
-  children: ReactText;
+  children: React.ReactNode;
 }
 
 const Text = ({ fontColor, fontSize, fontWeight, cursor = false, children, onClick }: ITextComponentProps) => {

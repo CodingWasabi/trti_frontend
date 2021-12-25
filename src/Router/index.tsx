@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import loadable from '@loadable/component';
 
 const GroupCreatePage = loadable(() => import('@/pages/GroupCreatePage'));
+const GroupDeatilPage = loadable(() => import('@/pages/GroupDetailPage'));
+const GroupListPage = loadable(() => import('@/pages/GroupListPage'));
 const LoginPage = loadable(() => import('@/pages/LoginPage'));
 const MainPage = loadable(() => import('@/pages/MainPage'));
 const MyProfilePage = loadable(() => import('@/pages/MyProfilePage'));
@@ -19,6 +21,8 @@ const Router = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" component={MainPage} exact />
+        <Route path="/groups" component={GroupListPage} exact />
+        <Route path="/group/:id" component={GroupDeatilPage} exact />
         <Route path="/group/create" component={GroupCreatePage} exact />
         <Route path="/login" component={LoginPage} exact />
         <Route path="/mypage" component={MyProfilePage} exact />

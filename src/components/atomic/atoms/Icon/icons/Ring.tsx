@@ -6,8 +6,8 @@ const Ring = () => {
       <path
         d="M14 5C14 2.79086 11.0899 1 7.5 1C3.91015 1 1 2.79086 1 5"
         stroke="#707070"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
