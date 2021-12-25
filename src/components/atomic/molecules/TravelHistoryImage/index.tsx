@@ -3,12 +3,9 @@ import React from 'react';
 import Image from '@/components/atomic/atoms/Image';
 import AgreementStatus from '@/components/atomic/atoms/AgreementStatus';
 
-import { Wrapper, PositionWrapper } from './style';
+import { ITravelHistoryImage } from '@/types/travelHistory';
 
-interface ITravelHistoryImage {
-  src?: string;
-  alt?: string;
-}
+import { Wrapper, PositionWrapper } from './style';
 
 const TravelHistoryImage = ({ src, alt }: ITravelHistoryImage) => {
   return (
