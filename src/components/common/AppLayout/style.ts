@@ -23,9 +23,9 @@ export const ContentsWrapper = styled.div`
 export const Contents = styled.div`
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
 
   margin: 0 auto;
   padding: 0px 10px;
