@@ -1,7 +1,7 @@
 export const travelHistoryList = [
   {
     id: 1,
-    title: '코딩 여행',
+    name: '코딩 여행',
     location: '서울 북촌',
     startDate: '2021-12-30',
     endDate: '2021-01-12',
@@ -11,7 +11,7 @@ export const travelHistoryList = [
   },
   {
     id: 2,
-    title: '바보 여행',
+    name: '바보 여행',
     location: '서울 북촌',
     startDate: '2021-12-30',
     endDate: '2021-01-12',
@@ -21,7 +21,7 @@ export const travelHistoryList = [
   },
   {
     id: 3,
-    title: '코딩 여행',
+    name: '코딩 여행',
     location: '서울 북촌',
     startDate: '2021-12-30',
     endDate: '2021-01-12',
@@ -31,7 +31,7 @@ export const travelHistoryList = [
   },
   {
     id: 4,
-    title: '코딩 여행',
+    name: '코딩 여행',
     location: '서울 북촌',
     startDate: '2021-12-30',
     endDate: '2021-01-12',
@@ -41,7 +41,7 @@ export const travelHistoryList = [
   },
   {
     id: 5,
-    title: '코딩 여행',
+    name: '코딩 여행',
     location: '서울 북촌',
     startDate: '2021-12-30',
     endDate: '2021-01-12',
@@ -51,7 +51,7 @@ export const travelHistoryList = [
   },
   {
     id: 6,
-    title: '코딩 여행',
+    name: '코딩 여행',
     location: '서울 북촌',
     startDate: '2021-12-30',
     endDate: '2021-01-12',

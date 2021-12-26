@@ -7,11 +7,11 @@ import { ITravelHistorySummary } from '@/types/travelHistory';
 
 import { Wrapper, DescriptionBox, FlexWrapper, ParticipantsCountWrapper } from './style';
 
-const TravelHistorySummary = ({ title, startDate, endDate, location, participantsCount }: ITravelHistorySummary) => {
+const TravelHistorySummary = ({ name, startDate, endDate, location, participantsCount }: ITravelHistorySummary) => {
   return (
     <Wrapper>
       <Text fontColor="#1B1B1B" fontSize="15px" fontWeight="500">
-        {title}
+        {name}
       </Text>
       <DescriptionBox>
         <Text fontColor="#707070" fontSize="11px" fontWeight="400">
