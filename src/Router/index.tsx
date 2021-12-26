@@ -22,8 +22,8 @@ const Router = () => {
       <Switch>
         <Route path="/" component={MainPage} exact />
         <Route path="/groups" component={GroupListPage} exact />
-        <Route path="/group/:id" component={GroupDeatilPage} exact />
         <Route path="/group/create" component={GroupCreatePage} exact />
+        <Route path="/group/:id" component={GroupDeatilPage} exact />
         <Route path="/login" component={LoginPage} exact />
         <Route path="/mypage" component={MyProfilePage} exact />
         <Route path="/tendency" component={TripTendencyPage} exact />

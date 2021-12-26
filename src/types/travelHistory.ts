@@ -1,10 +1,14 @@
+export interface IParams {
+  id: number;
+}
+
 export interface ITravelHistoryImage {
   src?: string | null;
   alt?: string;
 }
 
 export interface ITravelHistorySummary {
-  title: string;
+  name: string;
   startDate: string;
   endDate: string;
   location: string;
@@ -17,4 +21,12 @@ export interface ITravelHistory extends ITravelHistoryImage, ITravelHistorySumma
 
 export interface ITravelHistoryList {
   travelHistoryList: Array<ITravelHistory>;
+}
+
+export interface ITravelGroupProps {
+  name: string;
+  period: Array<string>;
+  image: string;
+  location: string;
+  members: Array<string>;
 }

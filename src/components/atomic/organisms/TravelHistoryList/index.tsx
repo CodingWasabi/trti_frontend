@@ -21,7 +21,7 @@ const TravelHistoryList = ({ travelHistoryList }: ITravelHistoryList) => {
               key={history.id}
               src={history.src}
               alt="여행사진"
-              title={history.title}
+              name={history.name}
               startDate={history.startDate}
               endDate={history.endDate}
               location={history.location}
