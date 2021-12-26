@@ -8,4 +8,6 @@ export const StyledSpan = styled.span<ITextProps>`
   color: ${(props) => props.fontColor};
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};
+
+  text-align: ${(props) => props.textAlign};
 `;
