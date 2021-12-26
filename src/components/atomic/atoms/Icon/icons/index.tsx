@@ -10,3 +10,4 @@ export { default as EmptyImage } from './EmptyImage';
 export { default as Marker } from './Marker';
 export { default as PlusPeople } from './PlusPerson';
 export { default as Calendar } from './Calendar';
+export { default as Check } from './Check';
