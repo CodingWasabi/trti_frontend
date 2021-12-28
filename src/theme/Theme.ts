@@ -15,6 +15,7 @@ export const Theme = {
   F_4: '#191919',
   B_1: '#FBFBFB',
   B_2: '#F5F5F5',
+  C_1: '#F83146',
 
   // responsive
   mobile: `@media (max-width: ${size.mobile})`,

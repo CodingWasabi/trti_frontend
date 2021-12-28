@@ -13,6 +13,7 @@ export interface ITravelHistorySummary {
   endDate: string;
   location: string;
   participantsCount: number;
+  type?: string;
 }
 
 export interface ITravelHistory extends ITravelHistoryImage, ITravelHistorySummary {
