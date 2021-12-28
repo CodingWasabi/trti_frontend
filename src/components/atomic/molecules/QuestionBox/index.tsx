@@ -6,21 +6,24 @@ import { Wrapper, IconWrapper, QuestionBoxWrapper } from './style';
 
 export interface IQuestionBoxProps {
   clicked: boolean;
+  backgroundColor: string;
+  onClick: () => void;
 }
 
 interface IQuestionComponentProps extends IQuestionBoxProps {
   children: React.ReactNode;
 }
 
-const QuestionBox = ({ clicked, children }: IQuestionComponentProps) => {
+const QuestionBox = ({ clicked, backgroundColor, onClick, children }: IQuestionComponentProps) => {
   return (
     <Wrapper>
-      {clicked && (
-        <IconWrapper>
-          <CheckCircle />
-        </IconWrapper>
-      )}
-      <QuestionBoxWrapper clicked={clicked}>{children}</QuestionBoxWrapper>
+      <IconWrapper clicked={clicked}>
+        <CheckCircle />
+      </IconWrapper>
+
+      <QuestionBoxWrapper clicked={clicked} backgroundColor={backgroundColor} onClick={onClick}>
+        {children}
+      </QuestionBoxWrapper>
     </Wrapper>
   );
 };
