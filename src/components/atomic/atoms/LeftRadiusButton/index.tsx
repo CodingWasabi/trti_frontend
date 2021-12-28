@@ -12,7 +12,7 @@ interface ILeftRadiusButtonProps {
 }
 
 interface ILeftRadiusButtonComponentProps extends ILeftRadiusButtonProps {
-  children: React.ReactText;
+  children: React.ReactNode;
 }
 
 const LeftRadiusButton = ({
@@ -20,17 +20,19 @@ const LeftRadiusButton = ({
   backgroundColor,
   margin,
   disabled = false,
+  onClick,
   children,
 }: ILeftRadiusButtonComponentProps) => {
   return (
     <Button
-      maxWidth="450px"
+      maxWidth="375px"
       width={width}
       height="54px"
       backgroundColor={backgroundColor}
       borderRadius="20px 0px 0px 0px"
       margin={margin}
-      disabled={disabled}>
+      disabled={disabled}
+      onClick={onClick}>
       <Text fontColor="#FFFFFF" fontSize="18px" fontWeight="700">
         {children}
       </Text>
