@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const StyledH1 = styled.h1`
   font-weight: 700;
   font-size: 18px;

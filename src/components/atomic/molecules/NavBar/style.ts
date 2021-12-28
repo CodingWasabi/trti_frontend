@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 
-import { Theme } from '@/theme/Theme';
-
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-bottom: 27px;
 
   height: 50px;
 

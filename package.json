@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
+    "@types/react-slick": "^0.23.8",
     "@wojtekmaj/react-daterange-picker": "^3.3.2",
     "axios": "^0.24.0",
     "react": "^17.0.2",

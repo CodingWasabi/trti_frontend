@@ -12,7 +12,7 @@ import GroupInfoPeople from '@/components/atomic/molecules/GroupInfoPeople';
 
 import AppLayout from '@/components/common/AppLayout';
 
-import { StyledH1, GroupInfoInputWrapper } from './style';
+import { Wrapper, StyledH1, GroupInfoInputWrapper } from './style';
 
 export interface IGroupStateProps {
   name: string;
@@ -57,39 +57,41 @@ const GroupCreatePage = () => {
 
   return (
     <AppLayout>
-      <StyledH1 style={{ marginBottom: '20px' }}>여행 그룹 만들기</StyledH1>
-      <EmptyImageLabel width={isDesktop ? 280 : 200} height={isDesktop ? 220 : 160} margin="0 0 20px 0" />
-      <Input
-        type="text"
-        name="name"
-        width={isDesktop ? '400px' : '200px'}
-        height={'30px'}
-        borderBottom="1px solid #A0A0A0"
-        textAlign="center"
-        margin="0 0 25px 0"
-        value={groupState.name}
-        onChange={onChangeInput}
-        placeholder="그룹 이름 입력"
-      />
-
-      <GroupInfoInputWrapper>
-        <GroupInfoSelectRegion onChangeSelect={onChangeSelect} />
-        <GroupInfoCalendar date={date} setDate={setDate} />
-        <GroupInfoPeople
-          email={groupState.email}
-          members={groupState.members}
-          onChangeEmail={onChangeInput}
-          setMembers={setGroupState}
+      <Wrapper>
+        <StyledH1 style={{ marginBottom: '20px' }}>여행 그룹 만들기</StyledH1>
+        <EmptyImageLabel width={isDesktop ? 280 : 200} height={isDesktop ? 220 : 160} margin="0 0 20px 0" />
+        <Input
+          type="text"
+          name="name"
+          width={isDesktop ? '400px' : '200px'}
+          height={'30px'}
+          borderBottom="1px solid #A0A0A0"
+          textAlign="center"
+          margin="0 0 25px 0"
+          value={groupState.name}
+          onChange={onChangeInput}
+          placeholder="그룹 이름 입력"
         />
-      </GroupInfoInputWrapper>
 
-      <LeftRadiusButton
-        width={isDesktop ? '450px' : '335px'}
-        backgroundColor={isSelected ? '#FF7F8C' : '#A0A0A0'}
-        margin="0 0 30px 0"
-        disabled={isSelected ? false : true}>
-        그룹 생성하기
-      </LeftRadiusButton>
+        <GroupInfoInputWrapper>
+          <GroupInfoSelectRegion onChangeSelect={onChangeSelect} />
+          <GroupInfoCalendar date={date} setDate={setDate} />
+          <GroupInfoPeople
+            email={groupState.email}
+            members={groupState.members}
+            onChangeEmail={onChangeInput}
+            setMembers={setGroupState}
+          />
+        </GroupInfoInputWrapper>
+
+        <LeftRadiusButton
+          width={isDesktop ? '450px' : '335px'}
+          backgroundColor={isSelected ? '#FF7F8C' : '#A0A0A0'}
+          margin="0 0 30px 0"
+          disabled={isSelected ? false : true}>
+          그룹 생성하기
+        </LeftRadiusButton>
+      </Wrapper>
     </AppLayout>
   );
 };

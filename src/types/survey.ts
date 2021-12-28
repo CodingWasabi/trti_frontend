@@ -1,8 +1,6 @@
 export interface IAnswerProps {
-  answer: {
-    id: number;
-    answer: string;
-  };
+  id: number;
+  answer: string;
 }
 
 export interface ISurveyProps {
