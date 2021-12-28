@@ -9,17 +9,21 @@ import NavBar from '@/components/atomic/molecules/NavBar';
 
 import { Wrapper, ContentsWrapper, Contents } from './style';
 
-interface IAppLayoutComponentProps {
+export interface IAppLayout {
+  isBlurred?: boolean;
+}
+
+interface IAppLayoutComponentProps extends IAppLayout {
   children: React.ReactNode;
 }
 
-const AppLayout = ({ children }: IAppLayoutComponentProps) => {
+const AppLayout = ({ isBlurred = false, children }: IAppLayoutComponentProps) => {
   const isDesktop = useGetResponsive() > 1024;
   return (
     <Wrapper>
       <Header />
       {isDesktop && <NavBar />}
-      <ContentsWrapper>
+      <ContentsWrapper isBlurred={isBlurred}>
         <Contents>{children}</Contents>
       </ContentsWrapper>
       <Footer />
