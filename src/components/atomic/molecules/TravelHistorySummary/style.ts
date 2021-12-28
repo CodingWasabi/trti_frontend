@@ -7,9 +7,10 @@ export const Wrapper = styled.div`
 
 export const DescriptionBox = styled.div``;
 
-export const FlexWrapper = styled.div`
+export const FlexWrapper = styled.div<{ isBlackType: boolean }>`
   display: flex;
   align-items: center;
+  justify-content: ${(props) => !props.isBlackType && 'center'};
 `;
 
 export const ParticipantsCountWrapper = styled.div`
