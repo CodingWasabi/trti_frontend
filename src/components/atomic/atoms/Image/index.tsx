@@ -9,7 +9,7 @@ export interface IImageProps {
   maxWidth: string;
   width: string;
   height: string;
-  borderRadius: string;
+  borderRadius?: string;
 }
 
 const Image = ({ objectFit = 'cover', src, alt = '', ...size }: IImageProps) => {
