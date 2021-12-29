@@ -15,14 +15,17 @@ const typeCheck = (type: string) => {
 };
 
 const TravelHistorySummary = ({
-  name,
-  startDate,
-  endDate,
+  title,
+  period,
   location,
   participantsCount,
   type = 'black',
 }: ITravelHistorySummary) => {
   const isBlackType = typeCheck(type);
+  const sDate = new Date(period[0]);
+  const eDate = new Date(period[1]);
+  let startDate = sDate.getFullYear() + '-' + (sDate.getMonth() + 1) + '-' + sDate.getDay();
+  let endDate = eDate.getFullYear() + '-' + (eDate.getMonth() + 1) + '-' + eDate.getDay();
 
   return (
     <Wrapper>
@@ -31,7 +34,7 @@ const TravelHistorySummary = ({
           fontColor={isBlackType ? Theme.F_4 : Theme.F_1}
           fontSize={isBlackType ? '15px' : '20px'}
           fontWeight={isBlackType ? '500' : '700'}>
-          {name}
+          {title}
         </Text>
       ) : (
         <FlexWrapper isBlackType={isBlackType}>
@@ -39,7 +42,7 @@ const TravelHistorySummary = ({
             fontColor={isBlackType ? Theme.F_4 : Theme.F_1}
             fontSize={isBlackType ? '15px' : '20px'}
             fontWeight={isBlackType ? '500' : '700'}>
-            {name}
+            {title}
           </Text>
         </FlexWrapper>
       )}

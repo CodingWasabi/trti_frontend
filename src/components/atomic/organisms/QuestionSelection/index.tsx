@@ -1,4 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import client from '@/lib/api/client';
 
 import Text from '@/components/atomic/atoms/Text';
 import LeftRadiusButton from '@/components/atomic/atoms/LeftRadiusButton';
@@ -36,11 +39,12 @@ const QuestionSelection = ({
     B: `${Theme.F_1}`,
   });
   const slideRef = useRef<HTMLDivElement>(null);
+  const history = useHistory();
 
   const onClickQuestion = ({ questionList, type }: { questionList: { A: string; B: string }; type: string }) => {
     if (type === 'A') {
       let newAnswers = answers.filter((answer) => answer.id !== clickedCount);
-      newAnswers = [...newAnswers, { id: clickedCount, answer: questionList.A }];
+      newAnswers = [...newAnswers, { id: clickedCount, answer: 0 }];
 
       setAnswers(newAnswers);
 
@@ -57,7 +61,7 @@ const QuestionSelection = ({
 
     if (type === 'B') {
       let newAnswers = answers.filter((answer) => answer.id !== clickedCount);
-      newAnswers = [...newAnswers, { id: clickedCount, answer: questionList.B }];
+      newAnswers = [...newAnswers, { id: clickedCount, answer: 1 }];
 
       setAnswers(newAnswers);
 
@@ -93,6 +97,18 @@ const QuestionSelection = ({
       A: `${Theme.F_1}`,
       B: `${Theme.F_1}`,
     });
+
+    if (currentSlide + 1 === questionList.length) {
+      onSubmitTRTI();
+    }
+  };
+
+  const onSubmitTRTI = async () => {
+    const res = await client.post('/survey', { answers });
+
+    if (res.status === 200) {
+      history.push('/');
+    }
   };
 
   useEffect(() => {

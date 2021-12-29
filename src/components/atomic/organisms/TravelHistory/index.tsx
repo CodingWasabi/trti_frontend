@@ -7,17 +7,11 @@ import { ITravelHistory } from '@/types/travelHistory';
 
 import { Wrapper } from './style';
 
-const TravelHistory = ({ src, alt, name, startDate, endDate, location, participantsCount }: ITravelHistory) => {
+const TravelHistory = ({ imageUrl, alt, title, period, location, participantsCount, isAgreed }: ITravelHistory) => {
   return (
     <Wrapper>
-      <TravelHistoryImage src={src} alt={alt} />
-      <TravelHistorySummary
-        name={name}
-        startDate={startDate}
-        endDate={endDate}
-        location={location}
-        participantsCount={participantsCount}
-      />
+      <TravelHistoryImage imageUrl={imageUrl} alt={alt} isAgreed={isAgreed} />
+      <TravelHistorySummary title={title} period={period} location={location} participantsCount={participantsCount} />
     </Wrapper>
   );
 };

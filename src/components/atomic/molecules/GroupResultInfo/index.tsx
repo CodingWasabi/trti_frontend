@@ -24,9 +24,8 @@ const GroupResultInfo = ({ party }: IGroupResultInfoProps) => {
       <Image objectFit="cover" src={party.imageUrl} maxWidth="500px" width="100%" height="200px" />
       <ContentsWrapper>
         <TravelHistorySummary
-          name={party.title}
-          startDate={party.period[0]}
-          endDate={party.period[1]}
+          title={party.title}
+          period={party.period}
           location={party.location}
           participantsCount={party.participantsCount}
           type="white"

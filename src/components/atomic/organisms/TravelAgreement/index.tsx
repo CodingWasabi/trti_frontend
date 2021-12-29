@@ -17,8 +17,8 @@ interface ITravelAgreementProps {
   partyResultList: Array<{
     id: number;
     isAgreed: boolean;
-    count0: number;
-    count1: number;
+    count0: string;
+    count1: string;
     selected: number;
   }>;
 }

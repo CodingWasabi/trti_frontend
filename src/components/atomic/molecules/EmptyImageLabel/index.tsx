@@ -9,9 +9,10 @@ interface IEmptyImageLabel {
   width: number;
   height: number;
   margin?: string;
+  onChangeImg: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const EmptyImageLabel = ({ width, height, margin = '0' }: IEmptyImageLabel) => {
+const EmptyImageLabel = ({ width, height, margin = '0', onChangeImg }: IEmptyImageLabel) => {
   return (
     <>
       <Label
@@ -24,7 +25,7 @@ const EmptyImageLabel = ({ width, height, margin = '0' }: IEmptyImageLabel) => {
         htmlFor="file">
         <Icon icon="EmptyImage" width={30} height={30} />
       </Label>
-      <StyledInput id="file" type="file" accept="image/png, image/jpeg" />
+      <StyledInput id="file" type="file" onChange={onChangeImg} accept="image/png, image/jpeg" />
     </>
   );
 };

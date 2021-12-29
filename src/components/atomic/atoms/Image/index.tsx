@@ -6,7 +6,7 @@ export interface IImageProps {
   objectFit?: string;
   src: string;
   alt?: string;
-  maxWidth: string;
+  maxWidth?: string;
   width: string;
   height: string;
   borderRadius?: string;

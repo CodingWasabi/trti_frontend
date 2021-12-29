@@ -1,5 +1,7 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 
+import client from '@/lib/api/client';
+
 import Input from '@/components/atomic/atoms/Input';
 import Button from '@/components/atomic/atoms/Button';
 import Text from '@/components/atomic/atoms/Text';
@@ -12,9 +14,9 @@ import { Contents, InputWrapper } from './style';
 
 interface IGroupInfoPeople {
   email: string;
-  members: Array<string>;
+  members: Array<number>;
   onChangeEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  setMembers: React.Dispatch<React.SetStateAction<IGroupStateProps>>;
+  setMembers: React.Dispatch<React.SetStateAction<Array<number>>>;
 }
 
 const GroupInfoPeople = ({ email, members, onChangeEmail, setMembers }: IGroupInfoPeople) => {
@@ -24,6 +26,15 @@ const GroupInfoPeople = ({ email, members, onChangeEmail, setMembers }: IGroupIn
   const onClickContents = useCallback(() => {
     setOpen((prev) => !prev);
   }, [open]);
+
+  const onClickAdd = async () => {
+    const res = await client.post('/member', { email });
+    if (res.status === 200) {
+      const memberId = res.data.id;
+      setMembers([...members, memberId]);
+      alert('추가 되었습니다!');
+    }
+  };
 
   useEffect(() => {
     if (open) {
@@ -49,7 +60,7 @@ const GroupInfoPeople = ({ email, members, onChangeEmail, setMembers }: IGroupIn
           height="50px"
           borderBottom="1px solid black"
         />
-        <Button width="50px" height="30px" borderRadius="15px" backgroundColor="#6BE065">
+        <Button onClick={onClickAdd} width="50px" height="30px" borderRadius="15px" backgroundColor="#6BE065">
           <Text fontColor="#FFFFFF" fontSize="14px" fontWeight="500">
             추가
           </Text>

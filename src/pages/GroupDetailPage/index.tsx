@@ -1,6 +1,10 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
+import useGetPartynfo from '@/hooks/useGetPartyInfo';
+import useGetPartyMembers from '@/hooks/useGetPartyMembers';
+import useGetPartyResult from '@/hooks/useGetPartyResult';
+
 import Text from '@/components/atomic/atoms/Text';
 import LeftRadiusButton from '@/components/atomic/atoms/LeftRadiusButton';
 
@@ -16,19 +20,37 @@ import { IParams } from '@/types/travelHistory';
 
 import { Theme } from '@/theme/Theme';
 
-import { partyInfo, partyResultList, partyMemberList, partySuggestionList } from '@/mock';
+import { partyResultList, partySuggestionList } from '@/mock';
 
 import { StyledLink, SuggestionWrapper } from './style';
 
 const GroupDetailPage = ({ match: { params } }: RouteComponentProps) => {
   const { id } = params as IParams;
+  const {
+    partyInfo,
+    isLoading: isGetPartyInfoLoading,
+    error: partyInfoError,
+    mutate: partyInfoMutate,
+  } = useGetPartynfo(id);
+  const {
+    memberInfo,
+    isLoading: isGetPartyMemberLoading,
+    error: memberInfoError,
+    mutate: memberInfoMutate,
+  } = useGetPartyMembers(id);
+  const {
+    partyResultList: partyAnswer,
+    isLoading: isGetPartyResultListLoading,
+    error: partyResultListError,
+    mutate: getResultMutate,
+  } = useGetPartyResult(id);
 
   return (
     <AppLayout>
-      <GroupResultInfo party={partyInfo.party} />
-      <MemberScrollBox members={partyMemberList.members} margin="0 0 20px 0" />
-      <TravelAgreement partyResultList={partyResultList} isAgreed={partyInfo.party.isAgreed} />
-      {partyInfo.party.isAgreed === false && (
+      {partyInfo && <GroupResultInfo party={partyInfo} />}
+      {memberInfo && <MemberScrollBox members={memberInfo.members} margin="0 0 20px 0" />}
+      {partyResultList && <TravelAgreement partyResultList={partyResultList} isAgreed={partyInfo.isAgreed} />}
+      {partyInfo.isAgreed === false && (
         <StyledLink to={`/group/${id}/agree`}>
           <LeftRadiusButton width="100%" backgroundColor={Theme.C_1}>
             합의하러 가기

@@ -11,8 +11,8 @@ export interface ITreatySelectionBoxProps {
   title: string;
   isAgreed: boolean;
   color: string;
-  count0: number;
-  count1: number;
+  count0: string;
+  count1: string;
   selected: number;
 }
 
@@ -25,7 +25,7 @@ const TreatySelectionBox = ({ title, isAgreed, color, count0, count1, selected }
         </Text>
         {isAgreed === false && <TreatyWarningText />}
       </TitleWrapper>
-      <TreatyVersusSelection color={color} isAgreed={isAgreed} selected={selected} />
+      <TreatyVersusSelection color={color} isAgreed={isAgreed} selected={selected} count0={count0} count1={count1} />
     </Wrapper>
   );
 };

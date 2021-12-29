@@ -3,14 +3,14 @@ export interface IParams {
 }
 
 export interface ITravelHistoryImage {
-  src?: string | null;
+  imageUrl?: string | null;
   alt?: string;
+  isAgreed: boolean;
 }
 
 export interface ITravelHistorySummary {
-  name: string;
-  startDate: string;
-  endDate: string;
+  title: string;
+  period: Array<string>;
   location: string;
   participantsCount: number;
   type?: string;
@@ -25,7 +25,7 @@ export interface ITravelHistoryList {
 }
 
 export interface ITravelGroupProps {
-  name: string;
+  title: string;
   period: Array<string>;
   image: string;
   location: string;

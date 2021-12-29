@@ -20,7 +20,7 @@ export const getMyTrti = () => client.get('/my/result').then((res) => res.data);
 export const getMySuggestion = () => client.get('/my/suggestions').then((res) => res.data);
 
 // 그룹 정보 받아오기
-export const getMyGroups = () => client.get('/my/group').then((res) => res.data);
+export const getMyPartyList = () => client.get('/my/party').then((res) => res.data);
 
 // 내 정보 받아오기
 export const getMyInfo = () => client.get('/my/info').then((res) => res.data);

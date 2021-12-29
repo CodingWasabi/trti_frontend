@@ -15,4 +15,6 @@ export const Wrapper = styled.div`
   & > span {
     margin-bottom: 20px;
   }
+
+  margin-bottom: 20px;
 `;
